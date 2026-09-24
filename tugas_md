@@ -1,0 +1,51 @@
+# Jawaban Tugas Mandiri: Identifikasi Proposisi dan Tabel Kebenaran
+
+## 1. Identifikasi Proposisi
+
+* **"Binary Search butuh data terurut."**
+  * **Kategori:** Proposisi
+  * **Nilai Kebenaran:** Benar (True)
+  * *Penjelasan:* Algoritma Binary Search membutuhkan kumpulan data yang sudah terurut untuk melakukan pencarian.
+
+* **"Tolong buatkan query SQL ini!"**
+  * **Kategori:** Bukan Proposisi
+  * **Nilai Kebenaran:** Tidak Memiliki Nilai Kebenaran
+  * *Penjelasan:* Merupakan kalimat perintah/permintaan, bukan kalimat deklaratif.
+
+* **"Jika 5 genap, maka 5+1=6."**
+  * **Kategori:** Proposisi (Implikasi)
+  * **Nilai Kebenaran:** Benar (True)
+  * *Penjelasan:* Implikasi $p \rightarrow q$ bernilai Benar jika premis $p$ ("5 genap") bernilai Salah, terlepas dari nilai $q$.
+
+---
+
+## 2. Tabel Kebenaran
+
+Keterangan: **B** = Benar (True), **S** = Salah (False)
+
+### a. $\neg(p \land q)$
+
+| $p$ | $q$ | $p \land q$ | $\neg(p \land q)$ |
+|:---:|:---:|:-----------:|:-----------------:|
+|  B  |  B  |      B      |       **S**       |
+|  B  |  S  |      S      |       **B**       |
+|  S  |  B  |      S      |       **B**       |
+|  S  |  S  |      S      |       **B**       |
+
+### b. $(p \rightarrow q) \land p$
+
+| $p$ | $q$ | $p \rightarrow q$ | $(p \rightarrow q) \land p$ |
+|:---:|:---:|:-----------------:|:--------------------------:|
+|  B  |  B  |         B         |           **B**            |
+|  B  |  S  |         S         |           **S**            |
+|  S  |  B  |         B         |           **S**            |
+|  S  |  S  |         B         |           **S**            |
+
+### c. $(p \oplus q) \leftrightarrow (p \lor q)$
+
+| $p$ | $q$ | $p \oplus q$ | $p \lor q$ | $(p \oplus q) \leftrightarrow (p \lor q)$ |
+|:---:|:---:|:------------:|:----------:|:-----------------------------------------:|
+|  B  |  B  |      S       |     B      |                   **S**                   |
+|  B  |  S  |      B       |     B      |                   **B**                   |
+|  S  |  B  |      B       |     B      |                   **B**                   |
+|  S  |  S  |      S       |     S      |                   **B**                   |
