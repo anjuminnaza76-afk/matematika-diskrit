@@ -1,1 +1,2 @@
 # matematika-diskrit
+# naza ganteng
